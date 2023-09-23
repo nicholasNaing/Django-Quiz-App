@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+    {% block quiz %}
+        <div class="category_title">Choose the category</div>
+        <div class="categories">
+            <a class="history btn btn-light" href="{% url 'history-intro' %}">History</a>
+            <a class="geography btn btn-light" href="{% url 'geography-intro' %}">Geography</a>
+            <a class="astronomy btn btn-light" href="{% url 'astronomy-intro' %}">Astronomy</a>
+        </div>
+    {% endblock %}

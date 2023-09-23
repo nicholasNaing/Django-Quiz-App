@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>
+            <meta charset="utf-8">
+            <meta name="Description" content="Testing">
+            <title>Restart</title>
+            <link rel="stylesheet" href="{% static 'pj.css' %}">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        </header>
+    </head>
+    <body class = 'bg'>
+        <main>
+            <span class="test0"></span>
+                <span class="head_1"><b>Expand</b></span>
+                <div class="head_2"><b>Your</b></div>
+                <span class="head_3"><b>Knowledge Pool</b></span>
+                
+            <div class="p1">Does Current you have more Knowledge than the past you?</div>
+            <div class = 'p2'>How good are you with your knowledge?</div>
+            <div class = 'p3'>Chanllenge Yourself</div>
+            <div class = 'but'><a href="{% url 'log-in' %}" style = 'text-decoration: none;color:#1D3A64;'>Dive In</a></div>
+        </main>
+    </body>
+</html>

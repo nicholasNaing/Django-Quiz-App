@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% block quiz %}
+    <div style="text-align: center;">
+        {% if quiz_type == "history" %}
+            <h2 style="margin-top: 111px;font-weight: bold;text-shadow: 1px 1px 1px;">There is a total of {{ quiz_count }} questions in the History Quiz!</h2>
+            <a href = "{% url 'history' %}" class="btn btn-outline-light mt-3 quiz_start">▷</a>
+            {% if user.is_superuser %}
+            <div class="create_quiz mt-3"><a href = "{% url 'history-create' %}" style="color:white">Add quiz</a></div>
+            {% endif %}
+        {% elif quiz_type == "geography" %}
+            <h2 style="margin-top: 111px;font-weight: bold;text-shadow: 1px 1px 1px;">There is a total of {{ quiz_count }} questions in the Geography Quiz!</h2>
+            <a href = "{% url 'geography' %}" class="btn btn-outline-light mt-3 quiz_start">▷</a>
+            {% if user.is_superuser %}
+            <div class="create_quiz mt-3"><a href = "{% url 'geography-create' %}" style="color:white">Add quiz</a></div>
+            {% endif %}
+        {% elif quiz_type == "astronomy" %}
+            <h2 style="margin-top: 111px;font-weight: bold;text-shadow: 1px 1px 1px;">There is a total of {{ quiz_count }} questions in the Astronomy Quiz!</h2>
+            <a href = "{% url 'astronomy' %}" class="btn btn-outline-light mt-3 quiz_start">▷</a>
+            {% if user.is_superuser %}
+            <div class="create_quiz mt-3"><a href = "{% url 'astronomy-create' %}" style="color:white">Add quiz</a></div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

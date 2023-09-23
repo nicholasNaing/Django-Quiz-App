@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% block quiz %}
+    <form id = 'log_in_form' class = 'container' method = 'post'>
+        {% csrf_token %}
+            <center>
+                <h3 id = 'title'>Log into your account</h3>
+                <div class = 'user'>
+                    <label for = 'username'><b>Username:</b></label>
+                    <input id = 'username' type = 'text' name = 'user' required>
+                </div>
+                <br>
+                <div class = 'password'>
+                    <label for = 'ps1'><b>Password:</b></label>
+                    <input id = 'pass' type = 'password' name="pass" required>
+                </div>
+                <br>
+                <div class="text-muted reset_pass"><a style="text-decoration: none;color:white;" href="#">Forget Password?</a></div>
+                <div class = 'log_button'>
+                    <button id = 'log' class="btn btn-outline-light" type = 'submit'>Log in</button>
+                    <a class="btn btn-outline-light" id = 'sign' style="text-decoration: none;" href = "{% url 'sign-up' %}">Register</a>
+                </div>
+            </center>
+    </form>
+{% endblock %}

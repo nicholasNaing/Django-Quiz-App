@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% block quiz %}
+    <form id = 'sign_up_form' action = '' method = 'post'>
+        {% csrf_token %}
+        <center>
+            <fieldset class="form-group">
+                <legend class="border-bottom p-1">Sign Up Your Account</legend>
+                
+            </fieldset>			  
+            <div class = 'new_user'>
+                <label for = 'new_user'><b>Username:</b></label>
+                <input id = 'new_user' name = 'new_user' type = 'text' required>
+            </div>
+            <br>
+            <div class = fname>
+                <label for = 'fname'><b>First name:</b></label>
+                <input id = 'fname' name = 'f_name' type = 'text' required>
+            </div>
+            <br>
+            <div class = 'lname'>
+                <label for = 'lname'><b>Last name:</b></label>
+                <input id = 'lname' name = 'l_name' type = 'text' required>
+            </div>
+            <br>
+            <div class = 'mail'>
+                <label for = 'email'><b>Email:</b></label>
+                <input id = 'mail' name = 'mail' type = 'text' required>
+            </div>
+            </br>
+            <div class = 'ps1'>
+                <label for = 'p1'><b>Password:</b></label>
+                <input id = 'ps1' name = 'pw1' type = 'password' required>
+            </div>
+            <br>
+            <div class = 'ps2'>
+                <label for = 'ps2'><b>Confirm Password:</b></label>
+                <input id = 'ps2' name = 'pw2' type = 'password' required>
+            </div>
+            <br>
+            <button class = 'btn btn-outline-light sign_up' type = 'submit'>Sign up</a></button>
+        </center>
+    </form>
+{% endblock %}

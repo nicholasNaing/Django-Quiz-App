@@ -1,0 +1,144 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('stary_sky.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+.head_1,.head_2,.head_3{
+    font-size: xx-large;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.head_1 {
+    position:relative;
+    color:rgb(164, 164, 240);
+    animation-name:test1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.head_2 {
+    position: relative;
+    color:rgb(248, 171, 171) ;
+    animation-name:test2;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+}
+.head_3 {
+    position: relative;
+    color:rgb(248, 171, 171) ;
+    animation-name:test3;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+}
+.p1{
+    box-sizing: border-box;
+    color:#F5F5F5;
+    position:relative;
+    font-size: 1.2em;
+    font-weight:bolder;
+    line-height: 1.6;
+    margin:auto;
+    text-align: center;
+    animation-name:para1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    width:600px;
+    box-shadow: 5px 5px 5px white;
+    border-radius:0px 30px 0px 0px;
+}
+.p2{
+    color:#F5F5F5;
+    position:relative;
+    font-size: 1.2em;
+    font-weight:bolder;
+    line-height: 1.6;
+    margin:auto;
+    text-align: center;
+    animation-name:para2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    box-shadow: 5px 5px 5px white;
+    width:600px;
+}
+.p3{
+    color:#F5F5F5;
+    position:relative;
+    font-size: 1.2em;
+    font-weight:bolder;
+    line-height: 1.6;
+    margin:auto;
+    text-align: center;
+    animation-name:para3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    box-shadow: 5px 5px 5px white;
+    width:600px;
+    border-radius:0px 0px 0px 30px;
+}
+
+
+.but{
+    font-family: 'Outfit', sans-serif;
+    font-weight:bolder;
+    font-size: 1.5em;
+    text-align: center;
+    margin:auto;
+    position:relative;
+    bottom:-130px;
+    width:200px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top:30px;
+    background-color:#c9c895;
+    border-style:solid;
+    border-color:#1D3A64;
+    border-width: 5px;
+    border-radius: 30px;
+    animation-duration:5s;
+    animation-name:button;
+}
+
+@keyframes test1{
+    0%{top:-100px;left:5%}
+    50%{top:40px;left:5%;color: rgb(105, 105, 102);}
+    100%{top:70px;left:31%;color: #c9c895;}
+
+}
+@keyframes test2{
+    0%{top:-100px;left:32%}
+    50%{top:40px;left:32%;color: rgb(105, 105, 102);}
+    100%{top:70px;left:32%;color: #c9c895}
+}
+@keyframes test3{
+    0%{top:-100px;left:60%}
+    50%{top:40px;left:60%;color: rgb(105, 105, 102);}
+    100%{top:70px;left:33%;color: #c9c895;}
+}
+@keyframes para1{
+    0%{bottom:-900px;opacity: 0%;}
+    50%{bottom:-50px;opacity: 50%;}
+    100%{bottom:-100px;opacity: 100%;text-shadow:2px 2px 2px #87889c}
+}
+@keyframes para2{
+    0%{bottom:-900px;opacity: 0%;}
+    50%{bottom:-50px;opacity: 50%;}
+    100%{bottom:-115px;opacity: 100%;text-shadow:2px 2px 2px #87889c}
+}
+@keyframes para3{
+    0%{bottom:-900px;opacity: 0%;}
+    50%{bottom:-50px;opacity: 50%;}
+    100%{bottom:-130px;opacity:100%;text-shadow:2px 2px 2px #D4D4D4;}
+}
+@keyframes button{
+    0%{opacity: 0%;}
+    40%{opacity: 0%;}
+    100%{opacity:100%;}
+}

@@ -1,0 +1,58 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title></title>
+    </head>
+    <body class="astronomy_background_create" id="quiz_info" data-quiz-type="astronomy_quiz/" data-current-page="{{ page_obj.number }}" data-total-quizes="{{ total_quizes }}">
+        <nav class="navbar navbar-expand-lg astronomy-nav">
+            <div class="navbar-brand" id="brand-name">Quizpedia</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-color" href="{% url 'log-in'%}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == 'warning' %}
+                    <div class="alert alert-danger" role="alert" style="text-align: center;">
+                        <strong>{{ message.tags }}: {{ message }}</strong>
+                    </div>
+                {% else %}
+                    <div class="alert alert-{{ message.tags }}" role="alert" style="text-align: center;">
+                        <strong>{{ message.tags }}: {{ message }}</strong>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div>
+            <form method="POST" class="custom_form">
+                {% csrf_token %}
+                <h3 style="text-align: center;">
+                    Create Your Own Quiz
+                </h3>
+                {{ form|crispy }}
+                <div class="form-group">
+                    <button class="btn btn-outline-light create_quiz_button" type="submit">Create</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="{% static 'main.js' %}" ></script>
+</html>
